@@ -77,6 +77,11 @@ solves it. Practical means proportionate, not careless.
   being changed. Run broader or more expensive checks when the scope is stable
   and the risk justifies them. Report layers separately; a narrow check does not
   prove the build, integration, deployment, or user result.
+- Make evidence match the user's relevant starting condition. Existing
+  credentials, data, configuration, caches, or running processes can hide
+  failures. When first use or cold start is part of the outcome, validate from
+  a clean state and describe warm-state evidence only as what it actually
+  proves.
 - Test behavior at a seam that can expose it, using expected outcomes from an
   independent source. If no honest seam exists, report the limitation instead
   of adding a shallow test that creates false confidence.
@@ -111,6 +116,12 @@ solves it. Practical means proportionate, not careless.
 When real use of this skill still produces an impractical or bureaucratic
 result, finish the current task first, then tell the user and offer to report it
 at https://github.com/lumpinif/practical-engineering/issues.
+
+When the user is discussing this skill or reports that it behaved poorly, check
+whether a newer upstream version already addresses the problem when that check
+is cheap. If an update is available, tell the user and offer to install it using
+their existing installation method. Do not delay unrelated work for an update
+check or modify installed skills without permission.
 
 A useful report explains the concrete task and observed behavior, the expected
 practical result, why that result was missed, and how the skill's guidance was

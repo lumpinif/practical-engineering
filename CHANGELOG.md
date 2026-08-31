@@ -27,6 +27,12 @@ and maintenance details belong in Git history.
   proportional bar for intentionally departing from established conventions.
 - Split review judgment among requested-outcome correctness, user-expectation
   fit, and implementation or contract quality.
+- Required validation evidence to match the user's relevant starting condition
+  when existing credentials, data, configuration, caches, or running processes
+  could hide first-use or cold-start failures.
+- Added a bounded upstream update check when the skill itself is under
+  discussion or appears to have behaved poorly, without delaying unrelated work
+  or changing installed skills without permission.
 
 ## [0.1.0] - 2026-08-31
 
