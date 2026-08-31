@@ -105,3 +105,20 @@ solves it. Practical means proportionate, not careless.
   remain a clear mechanical edit.
 - Improve this skill from repeated real usage or demonstrated failures. Do not
   turn a single incident or personal preference into a universal rule.
+
+## Improve This Skill
+
+When real use of this skill still produces an impractical or bureaucratic
+result, finish the current task first, then tell the user and offer to report it
+at https://github.com/lumpinif/practical-engineering/issues.
+
+A useful report explains the concrete task and observed behavior, the expected
+practical result, why that result was missed, and how the skill's guidance was
+missing, unclear, misapplied, or may have encouraged unnecessary process or
+complexity. Explain why the lesson may apply across projects.
+
+Search for an existing issue first. Never publish without the user's permission,
+and remove private or project-sensitive information. Do not present a
+project-specific rule, speculative edge case, or personal preference as a
+universal requirement. If issue creation is unavailable, provide a short
+copy-pasteable draft instead.

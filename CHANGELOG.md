@@ -5,6 +5,12 @@ and maintenance details belong in Git history.
 
 ## [Unreleased]
 
+### Added
+
+- Added a permission-aware GitHub feedback path for concrete cases where the
+  skill misses a practical outcome or allows unnecessary process and
+  complexity.
+
 ### Changed
 
 - Made simplicity measurable through retired concepts and obligations rather

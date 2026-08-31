@@ -61,6 +61,18 @@ The project starts at `0.x` while the skill is calibrated through real use. A
 release should represent a meaningful change in behavior, not routine wording
 cleanup.
 
+## Feedback
+
+Use [GitHub Issues](https://github.com/lumpinif/practical-engineering/issues)
+when real use still produces an impractical result or unnecessary process. A
+useful report includes the concrete task and observed behavior, the expected
+practical result, why it was missed, how the skill failed to prevent or may have
+encouraged the problem, and why the lesson could apply across projects.
+
+Search existing issues first and remove private or project-sensitive details.
+Project-specific rules, speculative edge cases, and personal preferences should
+stay outside the shared skill unless evidence shows a broader problem.
+
 ## Status
 
 `0.1.0` is the current public version. Unreleased work intentionally keeps the
