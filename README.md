@@ -3,9 +3,9 @@
 Practical Engineering is a small Codex skill for making sound engineering
 decisions without turning normal work into process theater.
 
-It keeps attention on the requested user outcome, the real owner and control
-flow behind a problem, the smallest coherent correction, risk-proportional
-validation, and an honest stopping point.
+It keeps attention on the requested user outcome, reasonable user expectations,
+the real owner and control flow behind a problem, the smallest coherent
+correction, risk-proportional validation, and an honest stopping point.
 
 ## What It Is For
 
@@ -45,9 +45,17 @@ every possible edge case.
 - Keep project-specific facts in the project that owns them.
 - Require a concrete failure before adding abstractions, states, fallbacks,
   layers, large test matrices, or process.
+- Keep durable decision records only for choices that are hard to reverse,
+  surprising without context, and based on a real trade-off.
+- Remove instructions that do not change decisions, and avoid copying facts
+  that are cheap to discover from the code, configuration, or runtime.
 - Validate the skill structure with Codex's `skill-creator` validator.
 - Record meaningful behavior changes in `CHANGELOG.md`; use Git history for
   implementation detail.
+
+The evidence and simplification heuristics were informed by the Simplify
+Codebase skill and [Matt Pocock's skills](https://github.com/mattpocock/skills),
+then paraphrased and narrowed for this project.
 
 The project starts at `0.x` while the skill is calibrated through real use. A
 release should represent a meaningful change in behavior, not routine wording
@@ -55,5 +63,6 @@ cleanup.
 
 ## Status
 
-`0.1.0` is the initial public version. It intentionally has no scripts,
-references, assets, installation automation, or project-specific rules.
+`0.1.0` is the current public version. Unreleased work intentionally keeps the
+same small structure: no scripts, references, assets, installation automation,
+or project-specific rules.

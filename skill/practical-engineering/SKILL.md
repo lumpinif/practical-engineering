@@ -12,17 +12,37 @@ solves it. Practical means proportionate, not careless.
 
 - Understand the intended result, current behavior, and explicit non-goals
   before expanding the task.
-- Ask only when missing information would materially change the result, cause
-  irreversible impact, or require new authority. Otherwise make a reasonable,
-  reversible assumption and continue.
+- Find discoverable facts in the code, configuration, current behavior, and
+  authoritative sources yourself. Ask only for unavailable knowledge, a
+  material decision, or new authority; do the safe preparation and present the
+  evidence and recommendation first. Otherwise make a reversible assumption.
 - Preserve the user's scope and permissions. Completing a task does not imply
   permission to commit, publish, deploy, message others, or change unrelated
   systems.
 
+## Respect User Expectations
+
+- Treat user-visible behavior as incorrect when it is internally valid but
+  violates a reasonable expectation created by its wording, appearance,
+  location, the product's own behavior, or established platform and domain
+  conventions.
+- Start from what the target user would reasonably predict. Keep the same
+  concept consistent, prefer familiar interactions when they already work, and
+  verify conventions in the product's actual platform and context.
+- Depart from an established expectation only when a concrete user benefit or
+  constraint outweighs the learning and error cost. Make the difference clear
+  before it matters, preserve feedback and recovery, and validate significant
+  consequences with proportional user-facing evidence.
+
 ## Find the Owning Cause
 
 - Diagnose through observed behavior, ownership boundaries, and control flow.
-  Search results and suspicious code are clues, not root-cause proof.
+  Treat searches and smells as leads, rank confidence separately from benefit,
+  and prefer a smaller proved correction over a larger guess.
+- For a non-obvious bug, establish the tightest reliable feedback loop that
+  exercises the reported symptom before committing to a theory. If none is
+  possible, state the evidence gap and request the needed artifact, access, or
+  instrumentation instead of guessing.
 - Separate the visible symptom from the error, limitation, or contract that
   actually produces it.
 - Preserve useful error context. Do not hide broken behavior behind generic
@@ -31,7 +51,12 @@ solves it. Practical means proportionate, not careless.
 ## Choose the Smallest Coherent Correction
 
 - Prefer one root-cause correction over wrappers, fallback chains, special
-  branches, duplicated state, or parallel behavior.
+  branches, or parallel state. Measure simplicity by coherent obligations
+  retired, not lines or files, and subtract replacement or migration machinery.
+- Use the deletion test: if removing a layer spreads its rules across callers,
+  complexity moved rather than disappeared. Before merging similar safeguards
+  or lifecycle state, identify the owner, transition, failure window, and
+  guarantee each protects; similar shape does not prove redundancy.
 - Favor clear ownership, one authoritative source for each fact, explicit
   contracts, stable terminology, and fewer moving parts.
 - Preserve compatibility only for users and contracts that are still actually
@@ -50,13 +75,19 @@ solves it. Practical means proportionate, not careless.
   cleanup-only concerns.
 - During iteration, use the smallest real check that can expose the behavior
   being changed. Run broader or more expensive checks when the scope is stable
-  and the risk justifies them.
-- Tests must prove behavior and fail when that behavior is wrong. Test count is
-  not evidence by itself.
+  and the risk justifies them. Report layers separately; a narrow check does not
+  prove the build, integration, deployment, or user result.
+- Test behavior at a seam that can expose it, using expected outcomes from an
+  independent source. If no honest seam exists, report the limitation instead
+  of adding a shallow test that creates false confidence.
+- In review, assess requested-outcome correctness, user-expectation fit, and
+  implementation or contract quality as distinct axes; passing one does not
+  cover the others.
 
 ## Close Out Honestly
 
-- Stop when the requested outcome is proven. Record non-blocking follow-ups
+- Stop when the requested outcome is proven. An evidence-backed conclusion that
+  no change is justified is also a valid result. Record non-blocking follow-ups
   without turning them into required work.
 - Report the result, the evidence that supports it, any remaining actual risk
   or unknown, and the next action only when one is useful.
@@ -74,11 +105,3 @@ solves it. Practical means proportionate, not careless.
   remain a clear mechanical edit.
 - Improve this skill from repeated real usage or demonstrated failures. Do not
   turn a single incident or personal preference into a universal rule.
-
-## Calibration Examples
-
-- A known label change needs the edit and a focused check, not an architecture
-  investigation or a new test framework.
-- If a failed API request still produces a "Saved" state, trace who owns the
-  save result and fix error propagation there. Do not add a second
-  "maybe failed" state merely to cover the symptom.
