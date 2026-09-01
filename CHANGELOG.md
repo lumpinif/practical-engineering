@@ -30,6 +30,8 @@ and maintenance details belong in Git history.
 - Required validation evidence to match the user's relevant starting condition
   when existing credentials, data, configuration, caches, or running processes
   could hide first-use or cold-start failures.
+- Clarified that a real late finding does not automatically expand the current
+  task, while preserving coherent root-cause and material-risk exceptions.
 - Added a bounded upstream update check when the skill itself is under
   discussion or appears to have behaved poorly, without delaying unrelated work
   or changing installed skills without permission.

@@ -61,6 +61,12 @@ solves it. Practical means proportionate, not careless.
   contracts, stable terminology, and fewer moving parts.
 - Preserve compatibility only for users and contracts that are still actually
   supported.
+- A real finding discovered late does not automatically belong to the current
+  task. Include it only when it shows the requested outcome or its evidence is
+  invalid, is necessary for one coherent root-cause correction, or presents
+  material risk that cannot safely be deferred under Match Rigor. Otherwise
+  report it as a non-blocking follow-up and finish; if acting on it needs new
+  authority, ask instead of silently expanding.
 - Before adding state, an abstraction, a fallback, a layer, a large test
   matrix, or a process step, name the concrete failure it prevents and explain
   why the existing design cannot handle that failure more simply. If the value
