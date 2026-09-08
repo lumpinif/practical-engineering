@@ -50,9 +50,14 @@ solves it. Practical means proportionate, not careless.
 
 ## Choose the Smallest Coherent Correction
 
-- Prefer one root-cause correction over wrappers, fallback chains, special
-  branches, or parallel state. Measure simplicity by coherent obligations
-  retired, not lines or files, and subtract replacement or migration machinery.
+- Before adding special state, fallback paths, retries, or compensation,
+  identify which mechanism should own the behavior and why it failed to fulfill
+  that responsibility. Prefer correcting the cause within that ownership
+  boundary, and look for duplicate rules or patches made unnecessary by the
+  correction. Add a new mechanism only when the existing one cannot provide the
+  required guarantee more simply, and make its distinct responsibility explicit.
+- Measure simplicity by coherent obligations retired, not lines or files, and
+  subtract replacement or migration machinery.
 - Use the deletion test: if removing a layer spreads its rules across callers,
   complexity moved rather than disappeared. Before merging similar safeguards
   or lifecycle state, identify the owner, transition, failure window, and

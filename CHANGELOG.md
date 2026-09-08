@@ -13,6 +13,9 @@ and maintenance details belong in Git history.
 
 ### Changed
 
+- Made ownership-first correction explicit before adding special state,
+  fallbacks, retries, or compensation, including retiring duplicate rules and
+  patches made unnecessary by the same correction.
 - Made simplicity measurable through retired concepts and obligations rather
   than line or file count.
 - Assigned discoverable facts to the agent and moved necessary human decisions
